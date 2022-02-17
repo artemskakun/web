@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web1</title>
+</head>
+
+<body>
+<style>* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1310px
+    }
+}
+
+body {
+    margin: 0;
+    font-family: serif;
+    font-weight: 400;
+    color: #1A1C23
+}
+
+body input {
+    font-family: serif
+}
+
+body a {
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.container {
+    width: 1360px;
+    margin: auto
+}
+
+@media (max-width: 1399px) {
+    .container {
+        width: 1170px;
+        margin: auto
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        width: 980px;
+        margin: auto
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 740px;
+        margin: auto
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 550px;
+        margin: auto
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin: auto
+    }
+}
+.header{
+    font-family: serif;
+}
+.header a {
+    color: #1A1C23
+}
+
+.header__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 17px 0;
+
+}
+
+.header__logo {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.header__info-name {
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: right;
+}
+
+.main {
+    padding: 60px 0;
+    font-family: serif;
+}
+
+.main__wrap {
+    padding-bottom: 50px
+}
+
+#main__img {
+    height: 35%;
+    display: inline-block;
+    vertical-align: top
+}
+i {
+    border: solid #3399ff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.up{
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+
+.main__form {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top
+}
+
+.main__form-subtitle {
+    font-size: 16px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.main__form-submit {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    color: #FFFFFF;
+    padding: 18px 24px;
+    background: #3399ff;
+    border: 1px solid #4fa7ff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.main__form-submit:focus {
+    outline: none
+}
+
+.main__form-submit:hover {
+    cursor: pointer;
+    color: #1A1C23;
+    background: transparent
+}
+
+.main__form-submit:disabled {
+    opacity: 0.4
+}
+
+.main__input-text {
+    display: inline-block;
+    width: 520px;
+    background: #F4F5F6;
+    border: 1px solid #F4F5F6;
+    padding: 20px 25px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.main__input-text.error {
+    border: 1px solid red
+}
+
+.main__input-text:hover, .main__input-text:focus {
+    border: 1px solid #70b7ff;
+    outline: none
+}
+
+.main__input-select {
+    width: 150px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #F4F5F6;
+    border: 1px solid #F4F5F6;
+    padding: 20px 25px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.main__input-select.error {
+    border: 1px solid red
+}
+
+.main__input-select-wrap {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative
+}
+
+.main__input-select-wrap::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background: url("img/drop.png") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 22px;
+    right: 13px
+}
+
+.main__input-select:hover, .main__input-select:focus {
+    border: 1px solid #70b7ff;
+    outline: none;
+    cursor: pointer
+}
+
+.main__btns {
+    margin-bottom: 20px;
+}
+
+.r-radio {
+    padding: 12px 24px;
+    background: #70b7ff;
+    border: 1px solid #3399ff;
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.r-radio.error {
+    border: 1px solid red
+}
+
+.r-radio:hover, .r-radio.active {
+    color: #3399ff;
+    border: 1px solid #70b7ff;
+    cursor: pointer
+}
+
+.main__table th {
+    padding-top: 160px;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.3)
+}
+
+.main__table td {
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.3)
+}
+</style>
+<header class="header">
+    <div class="container">
+        <div class="header__wrap">
+            <a href="" class="header__logo">Web1</a>
+            <div class="header__info">
+                <a href="https://vk.com/atem_skakun" class="header__info-name">Скакун Артем Андреевич P3211</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- main section -->
+<section class="main">
+    <div class="container">
+        <div class="main__wrap">
+            <form class="main__form">
+                <div class="main__form-top">
+                    <div class="main__input-select-wrap">
+                        <select class="main__input-select" name="coordX">
+                            <option value="7">Выберите X</option>
+                            <option value="-3">-3</option>
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <input type="text" class="main__input-text" autocomplete="off" name="coordY"
+                           placeholder="Введите Y">
+                </div>
+                <div class="main__btns">
+                    <div class="main__btns-wrap">
+                        <div class="main__form-subtitle">Выберите R:</div>
+                        <div>
+                            <input class="r-radio" type="radio" id = "r-radio1" name="coordR" value="1">
+                            <label class="rbox-label" for="r-radio1">1</label>
+
+
+                            <input class="r-radio" type="radio" id = "r-radio2" name="coordR" value="2">
+                            <label class="rbox-label" for="r-radio2">2</label>
+
+                            <input class="r-radio" type="radio" name="coordR" id = "r-radio3" value="3">
+                            <label class="rbox-label" for="r-radio3">3</label>
+
+                            <input class="r-radio" type="radio" name="coordR" id = "r-radio4" value="4">
+                            <label class="rbox-label" for="r-radio4">4</label>
+
+                            <input class="r-radio" type="radio" name="coordR" id = "r-radio5" value="5">
+                            <label class="rbox-label" for="r-radio5">5</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="main__form-submit">Отправить</button>
+            </form>
+            <div id="main__img">
+                <img src="img/main-img.png" alt="">
+            </div>
+
+        </div>
+        <div class="arr">
+            <p><i class="arrow down"></i></p>
+        </div>
+        <table class="main__table">
+            <tr>
+                <th>Значение X</th>
+                <th>Значение Y</th>
+                <th>Значение R</th>
+                <th>Результат</th>
+                <th>Текущее время</th>
+                <th>Время работы скрипта, мс</th>
+            </tr>
+        </table><!--
+        <div class="arr">
+            <p><i class="arrow up"></i></p>
+        </div>-->
+    </div>
+</section>
+
+
+<!-- add scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
